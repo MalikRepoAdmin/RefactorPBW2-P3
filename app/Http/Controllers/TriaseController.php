@@ -10,7 +10,7 @@ class TriaseController extends Controller
     public function index()
     {
         $instansi = "Unit Gawat Darurat SehatNusantara";
-        return view('Triase', compact('instansi'));
+        return view('triase', compact('instansi'));
     }
 
     public function proses(Request $request)
@@ -38,7 +38,7 @@ class TriaseController extends Controller
             $warna_label = "green";
         }
 
-        return view('Triase', [
+        return view('triase', [
             'instansi' => $instansi,
             'kategori_triase' => $kategori_triase,
             'warna_label' => $warna_label,
