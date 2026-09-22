@@ -4,9 +4,9 @@
     <title>{{ $instansi ?? 'Unit Gawat Darurat SehatNusantara' }}</title>
 </head>
 <body>
-    <h2>Sistem Penilaian Traise - {{ $instansi ?? 'Unit Gawat Darurat SehatNusantara' }}</h2>
+    <h2>Sistem Penilaian Triase - {{ $instansi ?? 'Unit Gawat Darurat SehatNusantara' }}</h2>
     
-    <form method="POST" action="{{ url('/traise') }}">
+    <form method="POST" action="{{ url('/triase') }}">
         @csrf 
 
         <label>Detak Jantung (BPM):</label>
@@ -19,9 +19,9 @@
         <button type="submit">Evaluasi Tingkat Darurat</button>
     </form>
 
-    @if(isset($kategori_traise))
+    @if(isset($kategori_triase))
         <hr>
-        <h3 style="color: {{ $warna_label }};">{{ $kategori_traise }}</h3>
+        <h3 style="color: {{ $warna_label }};">{{ $kategori_triase }}</h3>
     @endif
 </body>
 </html>
