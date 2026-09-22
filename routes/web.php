@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TriaseController;
 
 Route::get('/', function(){
-    return redirect()->route('traise.index');
+    return redirect()->route('triase.index');
 });
 
-Route::get('/traise', [TriaseController::class, 'index'])->name('traise.index');
+Route::get('/triase', [TriaseController::class, 'index'])->name('triase.index');
 
-Route::post('/traise', [TriaseController::class, 'store'])->name('traise.store');
+Route::post('/triase', [TriaseController::class, 'proses'])->name('triase.proses');
